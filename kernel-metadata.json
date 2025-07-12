@@ -1,5 +1,5 @@
 {
-  "id": "your-kaggle-username/your-kernel-slug",
+  "id": "zattuonline/your-kernel-slug",
   "title": "Fine-tuning Gemma-3-4B on LaTeX-OCR Dataset",
   "code_file": "finetuning_gemma3_on_mathdataset.ipynb",
   "language": "python",
