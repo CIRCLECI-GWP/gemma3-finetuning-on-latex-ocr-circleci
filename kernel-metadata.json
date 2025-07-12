@@ -1,6 +1,6 @@
 {
   "id": "zattuonline/your-kernel-slug",
-  "title": "Fine-tuning Gemma-3-4B on LaTeX-OCR Dataset",
+  "title": "fine-tuning-gemma-3-4b-on-latex-ocr-dataset",
   "code_file": "finetuning_gemma3_on_mathdataset.ipynb",
   "language": "python",
   "kernel_type": "notebook",
