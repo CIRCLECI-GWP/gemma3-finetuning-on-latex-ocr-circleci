@@ -1,0 +1,46 @@
+# CircleCI 2.1 configuration file
+version: 2.1
+
+# Define a Docker executor with a basic Python image
+executors:
+  python_executor:
+    docker:
+      - image: cimg/python:3.9.16 # A standard Python image is sufficient
+
+jobs:
+  trigger_kaggle_finetune:
+    executor: python_executor
+    steps:
+      - checkout # Checkout the code from your repository
+
+      - run:
+          name: Install Kaggle CLI
+          command: |
+            pip install kaggle
+
+      - run:
+          name: Configure Kaggle API Credentials
+          # These commands create the ~/.kaggle directory and kaggle.json file
+          # using environment variables set in CircleCI.
+          # KAGGLE_USERNAME and KAGGLE_KEY must be set in your CircleCI project settings.
+          command: |
+            mkdir -p ~/.kaggle
+            echo '{"username":"'${KAGGLE_USERNAME}'","key":"'${KAGGLE_KEY}'"}' > ~/.kaggle/kaggle.json
+            chmod 600 ~/.kaggle/kaggle.json # Set appropriate permissions
+
+      - run:
+          name: Push Notebook to Kaggle and Trigger Run
+          # This command pushes your notebook to Kaggle.
+          # Kaggle will then automatically run the kernel based on its metadata.
+          # The -p . means push the kernel in the current directory.
+          # Ensure your kernel-metadata.json is correctly configured.
+          command: |
+            kaggle kernels push -p .
+
+workflows:
+  main_branch_trigger:
+    jobs:
+      - trigger_kaggle_finetune:
+          filters:
+            branches:
+              only: main # This job will only run when changes are pushed to the 'main' branch

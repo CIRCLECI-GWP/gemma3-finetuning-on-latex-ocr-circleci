@@ -1,0 +1,19 @@
+bitsandbytes
+accelerate
+xformers==0.0.29.post3
+peft
+trl
+triton
+cut_cross_entropy
+unsloth_zoo
+transformers==4.52.4
+sentencepiece
+protobuf
+datasets>=3.4.1
+huggingface_hub
+hf_transfer
+unsloth
+wandb
+torch # Explicitly include torch
+jupyter # Needed for nbconvert
+nbconvert # To convert the notebook to a script

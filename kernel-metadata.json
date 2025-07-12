@@ -1,0 +1,16 @@
+{
+  "id": "your-kaggle-username/your-kernel-slug",
+  "title": "Fine-tuning Gemma-3-4B on LaTeX-OCR Dataset",
+  "code_file": "finetuning_gemma3_on_mathdataset.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_internet": true,
+  "dataset_sources": [
+    "unsloth/latex-ocr"
+  ],
+  "competition_sources": [],
+  "model_sources": [],
+  "kernel_sources": []
+}
