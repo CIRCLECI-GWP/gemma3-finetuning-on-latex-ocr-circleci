@@ -8,7 +8,7 @@
   "enable_gpu": true,
   "enable_internet": true,
   "dataset_sources": [
-    "unsloth/latex-ocr"
+    "unsloth/LaTeX_OCR"
   ],
   "competition_sources": [],
   "model_sources": [],
