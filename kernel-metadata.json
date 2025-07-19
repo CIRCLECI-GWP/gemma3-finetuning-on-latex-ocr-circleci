@@ -1,5 +1,5 @@
 {
-  "id": "zattuonline/finetuning-gemma3-on-a-latex-ocr-dataset",
+  "id": "maskaravivek/finetuning-gemma3-on-a-latex-ocr-dataset",
   "title": "finetuning-gemma3-on-a-latex-ocr-dataset",
   "code_file": "finetuning-gemma3-on-a-latex-ocr-dataset.ipynb",
   "language": "python",
